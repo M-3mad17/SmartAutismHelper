@@ -21,10 +21,12 @@ if (!process.env.MONGODB_URI) {
 console.log('MONGODB_URI:', process.env.MONGODB_URI);
 
 // الاتصال بقاعدة البيانات
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('Connected to MongoDB Atlas'))
-  .catch(err => console.error('Failed to connect to MongoDB Atlas', err));
-
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log('Connected to MongoDB'))
+.catch(err => console.error('Failed to connect to MongoDB', err));
 // تعريف نموذج الرسالة
 const messageSchema = new mongoose.Schema({
   sender: String, // الدكتور أو الأهل
