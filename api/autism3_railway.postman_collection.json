@@ -1,19 +1,19 @@
 {
 	"info": {
-		"_postman_id": "55e6f930-9fd9-4f68-9af7-00c7b1b29a60",
-		"name": "autism 3",
+		"_postman_id": "8de5b9b1-490e-4462-a6b2-228c9fd6678e",
+		"name": "autism3_railway",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "41546242"
 	},
 	"item": [
 		{
-			"name": "register user",
+			"name": "register",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"username\": \"example\",\r\n     \"password\": \"password123\"\r\n   }",
+					"raw": " {\r\n      \"username\": \"testuser100\",\r\n      \"password\": \"testpassword123\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -21,11 +21,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://autism-3-20s4wrmvz-mohamed-emads-projects-f8ba5673.vercel.app/auth/register",
+					"raw": "https://smartautismhelper-production.up.railway.app/auth/register",
 					"protocol": "https",
 					"host": [
-						"autism-3-20s4wrmvz-mohamed-emads-projects-f8ba5673",
-						"vercel",
+						"smartautismhelper-production",
+						"up",
+						"railway",
 						"app"
 					],
 					"path": [
@@ -43,7 +44,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"username\": \"example\",\r\n     \"password\": \"password123\"\r\n   }",
+					"raw": " {\r\n      \"username\": \"testuser100\",\r\n      \"password\": \"testpassword123\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -51,11 +52,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://autism-3-20s4wrmvz-mohamed-emads-projects-f8ba5673.vercel.app/auth/login",
+					"raw": "https://smartautismhelper-production.up.railway.app/auth/login",
 					"protocol": "https",
 					"host": [
-						"autism-3-20s4wrmvz-mohamed-emads-projects-f8ba5673",
-						"vercel",
+						"smartautismhelper-production",
+						"up",
+						"railway",
 						"app"
 					],
 					"path": [
@@ -67,16 +69,35 @@
 			"response": []
 		},
 		{
-			"name": "get message",
+			"name": "messages",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <jwt-token>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "https://autism-3-20s4wrmvz-mohamed-emads-projects-f8ba5673.vercel.app/chat/messages?sender=senderId&receiver=receiverId",
+					"raw": "https://smartautismhelper-production.up.railway.app/chat/messages?sender=senderId&receiver=receiverId",
 					"protocol": "https",
 					"host": [
-						"autism-3-20s4wrmvz-mohamed-emads-projects-f8ba5673",
-						"vercel",
+						"smartautismhelper-production",
+						"up",
+						"railway",
 						"app"
 					],
 					"path": [
